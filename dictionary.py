@@ -9,11 +9,15 @@ print(information['Age'])
 
 # Favorite number
 
-favorite_numbers = {'Jyoti': 7, 'Atsuki': 4, 'Kosei': 2, 'Mii': 11, 'Hikaru': 32}
-print(favorite_numbers['Jyoti'])
-print(favorite_numbers['Atsuki'])
-print(favorite_numbers['Kosei'])
-print(favorite_numbers['Hikaru'])
+favorite_numbers = {'Jyoti': [7, 8, 3],
+                    'Atsuki': [4, 99],
+                    'Kosei': [2, 34],
+                    'Mii': [11, 23],
+                    'Hikaru': [32, 67]
+                    }
+for name, number in favorite_numbers.items():
+    for numbers in number:
+        print(f"{name}'s favorite numbers are {numbers}")
 
 # Glossary
 
@@ -78,12 +82,41 @@ peoples = {
     }
 }
 
-for people,user_info in peoples.items():
+for people, user_info in peoples.items():
     full_name = user_info['First_name'] + " " + user_info["Last_name"]
     city = user_info['City']
     age = user_info['Age']
 
     print(f"person's name is {full_name.title()}, {age} years old, from {city.title()}")
 
+# favorite places
 
-#pet
+favorite_places = {
+    'Atsuki': 'Tokyo',
+    'Lisa': 'Paris',
+    'Kevin': 'NY'
+}
+
+for name, place in favorite_places.items():
+    print(f"{name}'s favorite place is {place} ")
+
+# deli & #No pastrami
+
+sandwich_orders = ['American sub', 'Bacon', 'Beagle toast', 'BLT', 'Pastrami', 'Pastrami', 'Pastrami']
+finish_sandwiches = []
+
+print("Deli has run out of pastrami...")
+
+while len(sandwich_orders) != 0:
+    for sandwiches in sandwich_orders:
+        if sandwiches == "Pastrami":
+            sandwich_orders.remove(sandwiches)
+        else:
+            print(f"I made your {sandwiches} sandwiches")
+            finish = sandwich_orders.remove(sandwiches)
+            finish_sandwiches.append(finish)
+print("I made all of them! ")
+
+# Dream vacation
+
+
