@@ -60,3 +60,17 @@ def number_length(number):
     """
     word_length = len(str(number))
     return word_length
+
+
+def most_frequent(data):
+    """
+    determines the most frequently occurring string in the sequence.
+    """
+
+    >>> most_frequent(["a", "b", "c", "a", "b", "a"])
+    "a"
+
+    >>> most_frequent(["a", "a", "bi", "bi", "bi"])
+    "bi"
+
+    return max(data, key=data.count)
