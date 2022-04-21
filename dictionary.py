@@ -42,4 +42,98 @@ python_glossary = {
 }
 
 for key, value in python_glossary.items():
-    print(f"{key}:{value}")
+    print(f"{key.title()}:{value}")
+
+# 6-5
+
+country_river_list = {
+    'nile': 'egypt',
+    'shinano': 'japan',
+    'amazon': 'brazil',
+}
+
+for river, country in country_river_list.items():
+    print(f"The {river.title()} runs through {country.title()}")
+
+# 6-6
+
+favorite_language = {
+    'jen': 'python',
+    'atsuki': 'python',
+    'juan': 'java',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    'stefan': 'php'
+}
+
+friend_list = ['chris', 'nabil', 'hoda', 'juan', 'stefan', 'edward', 'atsuki']
+
+for name, language in favorite_language.items():
+    print(f"{name.title()} loves {language.title()}")
+
+for friend in friend_list:
+    if friend in favorite_language.keys():
+        print(f"{friend.title()}, thank you for taking a poll")
+    else:
+        print(f"{friend.title()}, please take a poll")
+
+# 6- 7
+
+pets = {
+    'Mii': {
+        'owner': 'atsuki',
+        'age': '3',
+        'animal': 'cat',
+        'gender': 'female'
+    },
+    'horny': {
+        'owner': 'nabil',
+        'age': '10',
+        'animal': 'unicorn',
+        'gender': 'male'
+    },
+    'maru': {
+        'owner': 'kosei',
+        'age': '12',
+        'animal': 'bird',
+        'gender': 'female'
+    }
+}
+
+for name, info in pets.items():
+    print(f"Name:{name}is owned by {info['owner']} kind:{info['animal']} Gender:{info['gender']}")
+
+# 6-9
+
+favorite_places = {
+    'atsuki': 'tokyo',
+    'juan': 'vancouver',
+    'stefan': 'Beijing'
+}
+for name, place in favorite_places.items():
+    print(f"{name.title()}'s favorite place is {place.title()}")
+
+# 6-11
+
+cities = {
+    'tokyo': {
+        'country': 'japan',
+        'population': '38 million',
+        'fun fact': 'largest city in the world'
+    },
+    'vancouver': {
+        'country': 'canada',
+        'population': '675,218',
+        'fun fact': ' Vancouver’s cruise ship terminal is the 4th largest in the world'
+    },
+    'Beijing': {
+        'country': 'china',
+        'population': '21.54 million',
+        'fun fact': 'Beijing was not always called Beijing.'
+    },
+
+}
+
+for city, name in cities.items():
+    print(city, name['country'], name['population'], name['fun fact'])
