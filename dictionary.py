@@ -1,122 +1,45 @@
-# person
+# 6-1
 
-information = {"First_name": 'Atsuki', "Last_name": 'Uchida', 'City': 'Tokyo', 'Age': '24'}
+person_1 = {'first_name': 'juan',
+            'last_name': 'Escalada',
+            'city': 'vancouver',
+            'age': '23'}
 
-print(information['First_name'])
-print(information['Last_name'])
-print(information['City'])
-print(information['Age'])
+person_2 = {'first_name': 'stefan',
+            'last_name': 'Chen',
+            'city': 'vancouver',
+            'age': '28'}
 
-# Favorite number
+person_list = [person_1, person_2]
 
-favorite_numbers = {'Jyoti': [7, 8, 3],
-                    'Atsuki': [4, 99],
-                    'Kosei': [2, 34],
-                    'Mii': [11, 23],
-                    'Hikaru': [32, 67]
-                    }
-for name, number in favorite_numbers.items():
-    for numbers in number:
-        print(f"{name}'s favorite numbers are {numbers}")
+full_name = person_1['first_name'] + person_1['last_name']
+print(f"Full name:{full_name.title()}\nAge:{person_1['age']}\nCity:{person_1['city']}")
 
-# Glossary
+full_name2 = person_2['first_name'] + person_2['last_name']
+print(f"Full name:{full_name2.title()}\nAge:{person_2['age']}\nCity:{person_2['city']}")
 
-python_keywords = {'list': ' used to store multiple items in a single variable',
-                   'dictionary': 'are used to store data values in key:value pairs',
-                   'tuple': ' used to store multiple items in a single variable',
-                   'int': 'integer number',
-                   'float': 'decimal number',
-                   'Booleans ': 'Booleans represent one of two values: True or False',
-                   'set': 'Sets are used to store multiple items in a single variable',
-                   'function': 'A function is a block of code which only runs when it is called.',
-                   'comment': 'can be used to explain Python code.',
-                   'iterator': 'is an object that contains a countable number of values.'
-                   }
-for (key, value) in python_keywords.items():
-    print(key, value)
+# 6-2
 
-# rivers
-
-rivers = {'nile': 'egypt', 'shinano': 'japan', 'amazon': 'brazil'}
-for key, value in rivers.items():
-    print(f"The {key} runs through {value}")
-    print(f"country: {value}")
-    print(f"river: {key}")
-
-# pooling
-
-
-friends = ['jack', 'tsu', 'sarah', 'edward']
-favorite_language = {
-    'jen': 'python',
-    'sarah': 'c',
-    'edward': 'ruby',
-    'phil': 'python',
+favorite_number = {
+    'Atsuki': 7,
+    'Juan': 24,
+    'Stefan': '83',
+    'Chis': '48',
+    'Nabil': '35'
 }
 
-for friend in friends:
-    if friend in favorite_language.keys():
-        print(f"{friend}, Thank you for responding!")
-    else:
-        print(f"{friend}, Please take a pool!")
+for name, num in favorite_number.items():
+    print(f"{name}'s favorite number:{num}")
 
-# people
-peoples = {
-    'first_info': {
-        "First_name": 'Atsuki',
-        "Last_name": 'Uchida',
-        'City': 'Tokyo',
-        'Age': '24'
-    },
-    'second_info': {
-        "First_name": 'jyoti',
-        "Last_name": 'kumari',
-        'City': 'dubai',
-        'Age': '27'
-    },
-    'third_info': {
-        "First_name": 'light',
-        "Last_name": 'yagami',
-        'City': 'tokyo',
-        'Age': '18'
-    }
+# 6-3
+
+python_glossary = {
+    'Dictionary': 'dictionary is an unordered collection of items. Each item of a dictionary has a key/value pair.',
+    'Set': 'Set has also curly bracket but it does not have key and value pair. No deplicate',
+    'Tuple': 'immutable objects, which means you can not change the value in tuple',
+    'List': 'mutable objects, which means you can not change the value in list',
+    'Float': 'number has decimal'
 }
 
-for people, user_info in peoples.items():
-    full_name = user_info['First_name'] + " " + user_info["Last_name"]
-    city = user_info['City']
-    age = user_info['Age']
-
-    print(f"person's name is {full_name.title()}, {age} years old, from {city.title()}")
-
-# favorite places
-
-favorite_places = {
-    'Atsuki': 'Tokyo',
-    'Lisa': 'Paris',
-    'Kevin': 'NY'
-}
-
-for name, place in favorite_places.items():
-    print(f"{name}'s favorite place is {place} ")
-
-# deli & #No pastrami
-
-sandwich_orders = ['American sub', 'Bacon', 'Beagle toast', 'BLT', 'Pastrami', 'Pastrami', 'Pastrami']
-finish_sandwiches = []
-
-print("Deli has run out of pastrami...")
-
-while len(sandwich_orders) != 0:
-    for sandwiches in sandwich_orders:
-        if sandwiches == "Pastrami":
-            sandwich_orders.remove(sandwiches)
-        else:
-            print(f"I made your {sandwiches} sandwiches")
-            finish = sandwich_orders.remove(sandwiches)
-            finish_sandwiches.append(finish)
-print("I made all of them! ")
-
-# Dream vacation
-
-
+for key, value in python_glossary.items():
+    print(f"{key}:{value}")
