@@ -1,0 +1,11 @@
+variable in python
+list in python
+tuple in python
+dictionary in python
+for loop in python
+while loop in python
+function in python
+classes in python
+working with files in python
+unit testing in python
+doctest in python
