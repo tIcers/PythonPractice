@@ -146,3 +146,60 @@ def spy_game(nums):
         if num == code[0]:
             code.pop(0)
     return len(code) == 1
+
+
+"""LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd
+lesser_of_two_evens(2,4) --> 2
+lesser_of_two_evens(2,5) --> 5"""
+
+
+def second_lesser_of_two_evens(a, b):
+    if a % 2 == 0 and b % 2 == 0:
+        return min(a, b)
+
+    else:
+        return max(a, b)
+
+
+print(second_lesser_of_two_evens(2, 5))
+print(second_lesser_of_two_evens(2, 4))
+
+"""ANIMAL CRACKERS: Write a function takes a two-word string and returns True if both words begin with same letter¶
+animal_crackers('Levelheaded Llama') --> True
+animal_crackers('Crazy Kangaroo') --> False"""
+
+
+def second_animal_crackers(word):
+    splited_word = word.split()
+    if splited_word[0][0] == splited_word[1][0]:
+        return True
+    else:
+        return False
+
+
+print(second_animal_crackers('Levelheaded Llama'))
+print(animal_crackers('Crazy Kangaroo'))
+
+"""OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+old_macdonald('macdonald') --> MacDonald
+Note: 'macdonald'.capitalize() returns 'Macdonald'"""
+
+
+def second_old_macdonald(word):
+    first = word[:3]
+    second = word[3:]
+    return first.capitalize() + second.capitalize()
+
+
+print(second_old_macdonald('macdonald'))  # slicing is good
+
+"""MASTER YODA: Given a sentence, return a sentence with the words reversed
+master_yoda('I am home') --> 'home am I'
+master_yoda('We are ready') --> 'ready are We'"""
+
+
+def second_master_yoda(sentence):
+    return sentence.split()[::-1].
+
+
+print(second_master_yoda('I am home'))
