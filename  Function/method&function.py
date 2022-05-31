@@ -198,8 +198,46 @@ master_yoda('I am home') --> 'home am I'
 master_yoda('We are ready') --> 'ready are We'"""
 
 
-def second_master_yoda(sentence):
-    return sentence.split()[::-1].
+#
 
 
-print(second_master_yoda('I am home'))
+"""ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+almost_there(90) --> True
+almost_there(104) --> True
+almost_there(150) --> False
+almost_there(209) --> True"""
+
+
+def second_almost_there(n):
+    if 90 <= n <= 110:
+        return True
+    elif 190 <= n <= 210:
+        return True
+    else:
+        False
+
+
+print(second_almost_there(90))
+print(second_almost_there(104))
+print(second_almost_there(150))
+print(second_almost_there(209))
+
+"""FIND 33:
+Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+has_33([1, 3, 3]) → True
+has_33([1, 3, 1, 3]) → False
+has_33([3, 1, 3]) → False"""
+
+
+def second_has_33(numbers):
+    for i in range(0, len(numbers) - 1):
+        if numbers[i] == 3 and numbers[i - 1] == 3:
+            return True
+        else:
+            return False
+
+
+print(second_has_33([1, 3, 3]))
+print(second_has_33([1, 3, 1, 3]))
+print(second_has_33([3, 1, 3]))
