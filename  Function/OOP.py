@@ -106,3 +106,28 @@ acct1.withdraw(75)
 
 # 6. Make a withdrawal that exceeds the available balance
 acct1.withdraw(500)
+
+
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def greet(self):
+        print(f"Hi! My name is {self.name} and I am a {self.species}")
+
+
+class Cat(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name, "Cat")
+
+    def sound(self):
+        print("MII")
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name, "Dog")
+
+    def sound(self):
+        print("Wuff")
