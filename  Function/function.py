@@ -118,13 +118,11 @@ print(palindrome('eunice'))
 
 all_alpha = list(string.ascii_lowercase + string.ascii_uppercase)
 
-
 def ispangram(word):
     for words in word:
-        if words not in all_alpha:
+        if all_alpha not in words:
             return False
         else:
             return True
-
-
 print(ispangram("The quick brown fox jumps over the lazy dog"))
+print(ispangram("i love you eunice"))
