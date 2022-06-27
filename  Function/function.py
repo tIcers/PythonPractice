@@ -1,3 +1,6 @@
+import string
+
+
 def greet_user(username):
     print(f"Hello, {username.title()}!")
 
@@ -103,3 +106,25 @@ print("\nFinal lists:")
 print(messages)
 print(sent_messages)
 
+
+def palindrome(word):
+    return word == word[::-1]
+
+
+print(palindrome('nurses run'))
+print(palindrome('abcba'))
+print(palindrome('helleh'))
+print(palindrome('eunice'))
+
+all_alpha = list(string.ascii_lowercase + string.ascii_uppercase)
+
+
+def ispangram(word):
+    for words in word:
+        if words not in all_alpha:
+            return False
+        else:
+            return True
+
+
+print(ispangram("The quick brown fox jumps over the lazy dog"))
