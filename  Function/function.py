@@ -118,11 +118,40 @@ print(palindrome('eunice'))
 
 all_alpha = list(string.ascii_lowercase + string.ascii_uppercase)
 
+
 def ispangram(word):
     for words in word:
         if all_alpha not in words:
             return False
         else:
             return True
+
+
 print(ispangram("The quick brown fox jumps over the lazy dog"))
 print(ispangram("i love you eunice"))
+
+
+def lesser_of_two_evens(a, b):
+    if a % 2 == 0 and b % 2 == 0:
+        return min(a, b)
+    else:
+        return max(a, b)
+
+
+2
+
+
+def animal_crackers(text):
+    wordlist = text.split()
+    return wordlist[0][0] == wordlist[1][0]
+
+
+def old_macdonald(name):
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return 'Name is too short!'
+
+
+def master_yoda(text):
+    return ' '.join(text.split()[::-1])
