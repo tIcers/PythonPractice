@@ -45,3 +45,28 @@ def word_length(phrase):
 
 
 word_length('How long are the words in this phrase')
+
+import random
+import time
+import math
+
+def calculateMouseSpeed(first,second,ms):
+    coordinateList = []
+    for x in range(11):
+        x1 = random.randint(1,1280)
+        y1 = random.randint(1,800)
+        ms = time.time()
+
+        x2 = random.randint(1,1280)
+        y2 = random.randint(1,800)
+        me = time.time()
+
+        first = (x2 - x1)
+        second = (y2 - y1)
+
+        distance = math.sqrt((first**2) +(second **2))
+        distance_time = me - ms
+        speed = distance / distance_time
+        coordinateList.append(speed)
+        time.sleep(0.1)
+    return coordinateList
