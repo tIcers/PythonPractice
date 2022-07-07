@@ -155,3 +155,13 @@ def old_macdonald(name):
 
 def master_yoda(text):
     return ' '.join(text.split()[::-1])
+
+
+from art import tprint
+
+
+def print_big(letter):
+    tprint(letter)
+
+
+print(print_big(a))
