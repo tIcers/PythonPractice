@@ -81,3 +81,39 @@ def filter_words(word_list, letter):
 
 l = ['hello','are','cat','dog','ham','hi','go','to','heart']
 filter_words(l,'h')
+
+
+import random
+import time
+import math
+
+coordinatesList = []
+duration = []
+
+for x in range(10):
+    ms = time.time()
+    x1 = random.randrange(0, 1280)
+    y1 = random.randrange(0, 800)
+    first = (x1, y1)
+    time.sleep(1)
+
+    x2 = random.randrange(0, 1280)
+    y2 = random.randrange(0, 800)
+    second = (x2, y2)
+    me = time.time()
+
+    duration.append(me - ms)
+    coordinatesList.append((first, second))
+
+print(coordinatesList)
+def calculateMouseSpeed(coordinatesList, duration):
+    total_distance = 0
+    total_duration = 0
+    for x in range(10):
+        distance = math.sqrt((coordinatesList[x][0][0] - coordinatesList[x][1][0]) ** 2 + (coordinatesList[x][0][1] - coordinatesList[x][1][1]) ** 2)
+        total_distance += distance
+        total_duration += duration[x]
+
+    return total_distance/total_duration
+
+print(calculateMouseSpeed(coordinatesList,duration))
