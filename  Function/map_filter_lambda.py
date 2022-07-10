@@ -117,3 +117,5 @@ def calculateMouseSpeed(coordinatesList, duration):
     return total_distance/total_duration
 
 print(calculateMouseSpeed(coordinatesList,duration))
+
+
